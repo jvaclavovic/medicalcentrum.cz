@@ -1,24 +1,41 @@
 {
+  "name": "11ty-bootstrap5",
+  "version": "1.0.0",
+  "description": "Minimal 11ty starter with Bootstrap 5 (beta1) and Parcel",
+  "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy",
-    "eleventy": "eleventy --serve",
-    "debug": "set DEBUG=* & eleventy",
-    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production"
+    "start": "cross-env NODE_ENV=development run-p watch:*",
+    "build": "cross-env NODE_ENV=production npm-run-all clean --parallel build:* --serial purgecss",
+    "build:eleventy": "eleventy",
+    "build:parcel": "parcel build parcel.js -d ./public/_assets -o main --public-url '/_assets' --no-source-maps",
+    "clean": "rimraf public/ .cache/",
+    "debug": "cross-env DEBUG=Eleventy* NODE_ENV=development run-s start",
+    "purgecss": "npx purgecss -c ./purgecss.config.js",
+    "watch:eleventy": "eleventy --serve",
+    "watch:parcel": "parcel watch parcel.js -d ./public/_assets -o main --public-url '/_assets'"
+  },
+  "keywords": [],
+  "author": "Thomas Hönig",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/THoenig/11ty-bs5-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/THoenig/11ty-bs5-starter/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "alpinejs": "^2.6.0",
-    "cross-env": "^7.0.2",
-    "cssnano": "^4.1.10",
+    "@11ty/eleventy": "^0.11.1",
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^5.0.0-beta1",
+    "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
-    "js-yaml": "^3.14.0",
-    "luxon": "^1.25.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-attrs": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "prismjs": "^1.21.0"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1"
+    "parcel": "^1.12.4",
+    "purgecss": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "scss": "^0.2.4"
   }
 }

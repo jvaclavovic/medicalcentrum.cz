@@ -1,60 +1,131 @@
-# Neat Starter
+# 11ty-bs5-starter
 
-Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS
+Bootstrap 5 starter for [11ty](https://www.11ty.dev/). Developed with rapid prototyping, easy customization/theming and fast loading times in mind.
 
-## Live Demo
+## Documentations
+- [11ty Static Site Generator](https://www.11ty.dev/docs/)
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs)
+- [Parcel.js](https://parceljs.org/getting_started.html)
+- [PurgeCSS](https://purgecss.com/)
 
-[https://neat-starter.netlify.app/](https://neat-starter.netlify.app/)
+## How to get started
 
-### Technologies used:
+### 1. Clone the repository
+```git clone https://github.com/THoenig/11ty-bs5-starter.git your-project-name```
 
-- [Netlify CMS](https://www.netlifycms.org/)
-- [Eleventy](https://www.11ty.dev/)
-- [Alpine.js](https://github.com/alpinejs/alpine)
-- [Tailwind CSS](https://tailwindcss.com/)
+### 2. cd into project directory
+```cd your-project-name```
 
-| ![image](https://user-images.githubusercontent.com/1884712/93762662-a62e4700-fc2d-11ea-9b2c-fda9f503402b.png) |
-| ------------------------------------------------------------------------------------------------------------- |
+### 3. Install dependencies
+```npm install```
 
+### 4. Run
+```npm start```
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/surjithctly/neat-starter&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+Then visit [http://localhost:8080](http://localhost:8080).
 
-## Getting Started
+## Building for production
+```npm run build```
 
-Detailed instructions are available in my blog. [Check it out](https://blog.surjithctly.in/neat-stack-create-a-static-website-with-netlify-cms-eleventy-alpinejs-and-tailwindcss)
+This will minify HTML, CSS and JS and purge unused styles.
 
-### 1\. Clone this Repository
+## Differences from 11ty default config
+While I want to keep things as default as possible, I decided to change the following:
 
+### [Input](https://www.11ty.dev/docs/config/#input-directory)/[Output](https://www.11ty.dev/docs/config/#output-directory) folders:
+``` javascript
+  config.dir = {
+    input: './src',
+    output: "./public"
+  }
 ```
-git clone https://github.com/surjithctly/neat-starter.git
+To separate configuration, actual source and output.
+
+### [setDataDeepMerge(true)](https://www.11ty.dev/docs/data-deep-merge/)
+For me, it just feels like this should be the default.
+
+### [setTemplateFormats](https://www.11ty.dev/docs/config/#template-formats)
+
+``` javascript
+  config.setTemplateFormats([
+    'njk',
+    'md',
+    'jpg',
+    'png',
+    'svg',
+    // 'liquid',
+    // 'pug',
+    // 'ejs',
+    // 'hbs',
+    // 'mustache',
+    // 'haml',
+    // '11ty.js',
+  ])
 ```
 
-### 2\. Navigate to the directory
+### [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs)
+I like it, so I added it.
 
-```
-cd neat-starter
-```
+### Add htmlmin [transform](https://www.11ty.dev/docs/config/#transforms)
+Minify HTML if NODE_ENV is set to 'production'.
 
-### 3\. Install dependencies
+### Ignore files and folders that start with '__' (double underscore)
+11ty parses Liquid in markdown. This is great, because this enables you to include custom Liquid/HTML in your markdown or split your content up. To prevent 11ty to create a new output folder, just use the double underscore.
 
-```
-npm install
-```
+**Example**:
+``` markdown
+# Hi
+This is content part 1.
 
-### 4\. Build the project to generate the first CSS
-
-This step is only required the very first time.
-
-```
-npm run build
+{% include ./__content-part-2.md %}
 ```
 
-### 5\. Run Eleventy
+## Customization
 
+By default, all styles and JS modules are activated. Deactivate the components you don't need to reduce file sizes and increase overall performance.
+
+The entry point for all assets is ```parcel.js```. Nothing much to see here, in fact this is the whole content:
+
+``` javascript
+import "./src/_assets/scss/main.scss"
+import "./src/_assets/js/main.js"
 ```
-npm run start
+
+Use the respective ```main.{scss,js}``` files to import stuff and extend to your liking.
+
+### SCSS
+**Entry point:** ```src/_assets/scss/main.scss```.
+
+In ```src/_assets/scss/_bootstrap.scss``` you can theme Bootstrap and (de-)activate Bootstrap modules. Further information on this topic in the Bootstrap docs about [SCSS customization](https://getbootstrap.com/docs/5.0/customize/sass/)
+
+### JS
+**Entry point:** ```src/_assets/js/main.js```. 
+
+Bootstrap imports are located in ```src/_assets/js/_bootstrap.js```. The Bootstrap docs for popovers and tooltips state that these modules have impact on performance, so make sure to deactivate if you don't need them.
+
+### The _data files
+```
+src/_data
+├── env.js
+├── layout.json
+├── menus.json
+└── site.json
 ```
 
-## Author
+#### env.js
+This contains the expression ```isDev``` to determine if NODE_ENV is 'development'. It's used to include sourcemaps in development mode and leave them out for a production build.
 
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
+#### layout.json
+Applies the default layout for all pages (unless otherwise specified).
+
+#### menus.json
+As I didn't want to include too much stuff like the [11ty navigation plugin](https://www.11ty.dev/docs/plugins/navigation/), you can use this file to build navigation menus the manual way. Of course, feel free to use the plugin!
+
+Don't forget to add a trailing slash to the URLs (at least to your internal ones)! This is important to be able to show the current active page. 11ty's ```{{ page.url }}``` **does** add a trailing slash and if you don't, the comparison will fail.
+
+#### site.json
+Contains the default metadata, site name and language.
+
+## That's it!
+Now go and create something awesome!

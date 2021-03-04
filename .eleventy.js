@@ -1,70 +1,55 @@
-const yaml = require("js-yaml");
-const { DateTime } = require("luxon");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const htmlmin = require("html-minifier");
+const markdownIt = require("markdown-it")
+const markdownItAttrs = require('markdown-it-attrs');
+const htmlmin = require("html-minifier")
 
-module.exports = function (eleventyConfig) {
-  // Disable automatic use of your .gitignore
-  eleventyConfig.setUseGitIgnore(false);
+const isProduction = process.env.NODE_ENV === 'production'
 
-  // Merge data instead of overriding
-  eleventyConfig.setDataDeepMerge(true);
+module.exports = function(config) {
+  config.dir = {
+    input: './src',
+    output: "./public"
+  }
 
-  // human readable date
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
-    );
-  });
+  config.setDataDeepMerge(true)
 
-  // Syntax Highlighting for Code blocks
-  eleventyConfig.addPlugin(syntaxHighlight);
+  config.setTemplateFormats([
+    'njk',
+    'md',
+    'jpg',
+    'png',
+    'svg',
+    // 'liquid',
+    // 'pug',
+    // 'ejs',
+    // 'hbs',
+    // 'mustache',
+    // 'haml',
+    // '11ty.js',
+  ])
 
-  // To Support .yaml Extension in _data
-  // You may remove this if you can use JSON
-  eleventyConfig.addDataExtension("yaml", (contents) =>
-    yaml.safeLoad(contents)
-  );
+  const markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true
+  }
 
-  // Add Tailwind Output CSS as Watch Target
-  eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
+  config.setLibrary("md",
+                    markdownIt(markdownItOptions)
+                    .use(markdownItAttrs))
 
-  // Copy Static Files to /_Site
-  eleventyConfig.addPassthroughCopy({
-    "./_tmp/static/css/style.css": "./static/css/style.css",
-    "./src/admin/config.yml": "./admin/config.yml",
-    "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
-  });
-
-  // Copy Image Folder to /_site
-  eleventyConfig.addPassthroughCopy("./src/static/img");
-
-  // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-
-  // Minify HTML
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath.endsWith(".html")) {
+  config.addTransform("htmlmin", function(content, outputPath) {
+    if(isProduction && outputPath.endsWith(".html")){
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true
-      });
-      return minified;
+      })
+
+      return minified
     }
 
-    return content;
-  });
+    return content
+  })
 
-  // Let Eleventy transform HTML files as nunjucks
-  // So that we can use .html instead of .njk
-  return {
-    dir: {
-      input: "src",
-    },
-    htmlTemplateEngine: "njk",
-  };
-};
+  return config
+}
