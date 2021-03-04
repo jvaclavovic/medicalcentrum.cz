@@ -1,29 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="cs">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>
       {{title}}
     </title>
-    {% if description %}
+        {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
     {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
-  </head>
-  <body>
-    {% include "./partials/navbar.html" %}
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <style>
+        .text-x {
+            color: #FF2E57;
+        }
+
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Rozbalit nabídku</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><strong>Medical centrum</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#poskytovane-sluzby">Služby</a>
+                    </li>
+                                        <li>
+                        <a class="page-scroll" href="#vybaveni">Vybavení</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#fotografie">Fotografie</a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#smluvni-pojistovny">Smluvní pojišťovny</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#cenik-vykonu">Ceník výkonů</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mapy">Mapa</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
     {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+    
+    
+    <section id="poskytovane-sluzby" class="poskytovane-sluzby">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Poskytované služby</h3>
+                    <div class="jumbotron">
+                        <ul>
+                            <li>diagnostika a léčba akutních a chronických onemocnění</li>
+                            <li>pravidelná kontrola zdravotního stavu, předpis léků</li>
+                            <li>pravidelné preventivní prohlídky každé 2 roky</li>
+                            <li>předoperační vyšetření</li>
+                            <li>odběry krve a moče</li>
+                            <li>očkování</li>
+                            <li>dispenzarizace vybraných chronických onemocnění</li>
+                            <li>spolupráce s ambulantními specialisty</li>
+                            <li>návštěvní služba (smluvená územní oblast pro návštěvní službu: město Plzeň, do 10 km od ordinace)</li>
+                            <li>možnost vyšetření CRP (ukazatel zánětlivého procesu) a INR (monitorace léčby Warfarinem) přímo v ordinaci</li>
+                            <li>EKG vyšetření – monitorace srdeční činnosti přímo v ordinaci</li>
+                            <li>24–hodinová ambulantní monitorace krevního tlaku (Holter TK)</li>
+                            <li>možnost vyšetření FOB (přístrojové vyšetření skrytého krvácení do stolice)</li>
+                            <li><a href="GDPR.pdf">Informace pro pacienty o zpracování osobních údajů</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="/static/js/alpine.js"></script>
+        <section id="vybaveni" class="poskytovane-sluzby">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Přístrojové vybavení ordinace</h3>
+                    <div class="jumbotron">
+                        <ul>
+                            <li>EKG přístroj</li>
+                            <li>Glukometr – vyšetření krevního cukru</li>
+                            <li>Koagulometr – stanovení INR - kontrola účinnosti léčby Warfarinem</li>
+                            <li>24–hodinová monitorace tlaku krevního – Holter TK</li>
+                            <li>Přístroj pro stanovení CRP (ukazatel zánětu), FOB (vyšetření skrytého krvácení do stolice)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fotografie" class="fotografie">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Fotografie</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="images/mc_foto_1.jpg" class="img-responsive img-rounded" />
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/mc_foto_2.jpg" class="img-responsive img-rounded" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="smluvni-pojistovny" class="smluvni-pojistovny">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h3>Smluvní pojišťovny</h3>
+                    <div class="jumbotron">
+                        <ul>
+                            <li>111 – Všeobecná zdravotní pojišťovna</li>
+                            <li>201 – Vojenská zdravotní pojišťovna ČR</li>
+                            <li>211 – Zdravotní pojišťovna Ministerstva vnitra ČR</li>
+                            <li>205 – Česká průmyslová zdravotní pojišťovna</li>
+                            <li>207 – Oborová zdravotní pojišťovna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="cenik-vykonu" class="cenik-vykonu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Ceník výkonů nehrazených ze zdravotního pojištění</h3>
+                    <table class="table table-bordered cenik">
+                        <tr>
+                            <th>Výkon</th>
+                            <th>Cena</th>
+                        </tr>
+                        <tr>
+                            <td>Výpis ze zdravotnické dokumentace</td>
+                            <td>250 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření pro řidičský průkaz (vydání, rozšíření, prodloužení)</td>
+                            <td>500 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření k vystavení zdravotního průkazu</td>
+                            <td>350 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Zdravotní prohlídka na žádost zaměstnavatele</td>
+                            <td>600 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření pro rizikové sporty a činnosti, vyšetření k vydání/prodloužení zbrojního průkazu</td>
+                            <td>600 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Lékařská zpráva pro komerční pojišťovnu, bodové hodnocení pracovního úrazu  -  s eventuální úpravou dle časové náročnosti</td>
+                            <td>300-600 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření a odběr krve na alkohol</td>
+                            <td>500 Kč</td>
+                        </tr>
+                         <tr>
+                        <td>Vyšetření před operací nehrazené z veřejného zdravotního pojištění</td>
+                            <td>600 Kč + požadovaná doplňující vyšetření</td>
+                        </tr>
+                        <tr>
+                            <td>Preventivní vyšetření stolice (FOB) do 50 let věku</td>
+                            <td>200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření osob bez zdravotního pojištění</td>
+                            <td>1,50 Kč/bod</td>
+                        </tr>
+                        <tr>
+                            <td>Nadstandardní očkování</td>
+                            <td>100 Kč + cena vakcíny</td>
+                        </tr>
+                        <tr>
+                            <td>Vystavení duplikátu dokladu (pracovní neschopnost, zdravotní průkaz)</td>
+                            <td>100 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Vyšetření před vystavením návrhu na lázeňskou péči - samoplátce</td>
+                            <td>400 Kč</td>
+                        </tr>
+                
+                        <tr>
+                            <td>Posouzení zdravotní způsobilosti ke studiu</td>
+                            <td>200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Zpráva pro účast na rekondičních a rekreačních pobytech</td>
+                            <td>200 Kč</td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorní vyšetření na vlastní žádost</td>
+                            <td>dle ceníku laboratoře</td>
+                        </tr>
+                        <tr>
+                            <td>Pořízení kopie zdravotnické dokumentace</td>
+                            <td>5 Kč za 1 stranu</td>
+                        </tr>
+                        <tr>
+                            <td>Administrativní úkon lékaře nezařazený jinde</td>
+                            <td>od 100 Kč dle časové náročnosti</td>
+                        </tr>
+                    </table>
+
+                    U ŽÁDNÉHO ZDRAVOTNÍHO VÝKONU PROVEDENÉHO V TÉTO ORDINACI NENÍ VYŽADOVÁN SOUHLAS PACIENTA PÍSEMNOU FORMOU.
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="mapy" class="mapy">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Mapa</h3>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5156.58108716557!2d13.368118786469681!3d49.74297675519004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470af1fc167bd9d1%3A0xcae2dcd1a671ab5b!2sMedical+centrum+s.r.o.!5e0!3m2!1scs!2sus!4v1467356326499"
+                        width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
