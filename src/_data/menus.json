@@ -1,12 +1,28 @@
 {
   "main": [
     {
-      "name": "Home",
-      "url": "/"
+      "name": "Služby",
+      "url": "#poskytovane-sluzby"
     },
     {
-      "name": "Github",
-      "url": "https://github.com/THoenig/11ty-bs5-starter/"
+      "name": "Vybavení",
+      "url": "#vybaveni"
+    },
+    {
+      "name": "Fotografie",
+      "url": "#fotografie"
+    },
+    {
+      "name": "Smluvní pojišťovny",
+      "url": "#smluvni-pojistovny"
+    },
+    {
+      "name": "Ceník výkonů",
+      "url": "#cenik-vykonu"
+    },
+    {
+      "name": "Mapa",
+      "url": "#mapy"
     }
   ]
 }
