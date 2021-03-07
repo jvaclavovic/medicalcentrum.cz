@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="{{ settings.description }}">
+    <meta name="author" content="{{ settings.copyright }}">
 
-    <title>Medical centrum - MUDr. Jana Červená</title>
+    <title>{{ settings.title }} - {{ settings.subtitle }}</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
@@ -26,6 +26,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+{% set postslist = collections.posts %}
+{% set partslist = collections.parts %}
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -48,25 +51,15 @@
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#poskytovane-sluzby">Služby</a>
-                    </li>
-                                        <li>
-                        <a class="page-scroll" href="#vybaveni">Vybavení</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#fotografie">Fotografie</a>
-                    </li>
 
-                    <li>
-                        <a class="page-scroll" href="#smluvni-pojistovny">Smluvní pojišťovny</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#cenik-vykonu">Ceník výkonů</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#mapy">Mapa</a>
-                    </li>
+{% for menu in partslist %}
+{% if menu.data.show == true %}
+<li>
+    <a class="page-scroll" href="#{{ menu.data.id }}">{{ menu.data.menu }}</a>
+</li>
+{% endif %}
+{% endfor %}
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -80,11 +73,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 had backg">
-
-
-                        <h1>Medical centrum</h1>
-                        <h1>MUDr. Jana Červená</h1>
-                        <p><strong>praktický lékař pro dospělé</strong></p>
+                        <h1>{{ settings.title }}</h1>
+                        <h1>{{ settings.subtitle }}</h1>
+                        <p><strong>{{ settings.description }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -93,27 +84,32 @@
 
     <br/>
 
-{% set postslist = collections.posts %}
-{% set partslist = collections.parts %}
-
 {% for post in postslist | reverse %}
+{% if post.data.show == true %}
 <section id="{{ post.data.slug }}">
 	<div class="container">
         <div class="row">
             <div class="col-lg-12">
-            	 <div class="jumbotron text-left objednavani">
-                	{{ post.data.content | safe }}
-            	</div>
+            	 {% if post.data.type == "normal" %}
+	            	 <div class="jumbotron text-left objednavani">
+	                	{{ post.data.content | safe }}
+	            	</div>
+            	{% endif %}
+            	{% if post.data.type == "warning" %}
+	            	 <div class="alert alert-danger" role="alert">
+	            	 	<h3>{{ post.data.title }}</h3>
+	                	{{ post.data.content | safe }}
+	            	</div>
+            	{% endif %}
             </div>
         </div>
     </div>
 </section>
+{% endif %}
 {% endfor %}
 
-{{ content | safe }}
-
-
 {% for part in partslist %}
+{% if part.data.show == true %}
 <section id={{ part.data.id }}>
 	<div class="container">
         <div class="row">
@@ -127,17 +123,32 @@
             	{% if part.data.type == "inline" %}
 	            	<h3>{{ part.data.title }}</h3>
 	                {{ part.data.content | safe }}
-	                <p></p>
+				{% endif %}
+				{% if part.data.type == "inline-no-title" %}
+	                {{ part.data.content | safe }}
 				{% endif %}
             </div>
         </div>
     </div>
 </section>
+{% endif %}
 {% endfor %}
 
+    <footer class="footer">
+      <div class="container">
+      	<p>{{ settings.copyright }}</p>
+      </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
     </body>
 </html>

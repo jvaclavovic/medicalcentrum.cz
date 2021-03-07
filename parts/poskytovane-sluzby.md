@@ -1,24 +1,23 @@
 ---
 layout: layouts/base.njk
 title: Poskytované služby
+menu: Služby
 id: poskytovane-sluzby
 type: block
+show: true
 date: 2020-11-02
 ---
-
-<ul>
-    <li>diagnostika a léčba akutních a chronických onemocnění</li>
-    <li>pravidelná kontrola zdravotního stavu, předpis léků</li>
-    <li>pravidelné preventivní prohlídky každé 2 roky</li>
-    <li>předoperační vyšetření</li>
-    <li>odběry krve a moče</li>
-    <li>očkování</li>
-    <li>dispenzarizace vybraných chronických onemocnění</li>
-    <li>spolupráce s ambulantními specialisty</li>
-    <li>návštěvní služba (smluvená územní oblast pro návštěvní službu: město Plzeň, do 10 km od ordinace)</li>
-    <li>možnost vyšetření CRP (ukazatel zánětlivého procesu) a INR (monitorace léčby Warfarinem) přímo v ordinaci</li>
-    <li>EKG vyšetření – monitorace srdeční činnosti přímo v ordinaci</li>
-    <li>24–hodinová ambulantní monitorace krevního tlaku (Holter TK)</li>
-    <li>možnost vyšetření FOB (přístrojové vyšetření skrytého krvácení do stolice)</li>
-    <li><a href="images/GDPR.pdf">Informace pro pacienty o zpracování osobních údajů</a></li>
-</ul>
+* diagnostika a léčba akutních a chronických onemocnění
+* pravidelná kontrola zdravotního stavu, předpis léků
+* pravidelné preventivní prohlídky každé 2 roky
+* předoperační vyšetření
+* odběry krve a moče
+* očkování
+* dispenzarizace vybraných chronických onemocnění
+* spolupráce s ambulantními specialisty
+* návštěvní služba (smluvená územní oblast pro návštěvní službu: město Plzeň, do 10 km od ordinace)
+* možnost vyšetření CRP (ukazatel zánětlivého procesu) a INR (monitorace léčby Warfarinem) přímo v ordinaci
+* EKG vyšetření – monitorace srdeční činnosti přímo v ordinaci
+* 24–hodinová ambulantní monitorace krevního tlaku (Holter TK)
+* možnost vyšetření FOB (přístrojové vyšetření skrytého krvácení do stolice)
+* [Informace pro pacienty o zpracování osobních údajů](/images/GDPR.pdf)

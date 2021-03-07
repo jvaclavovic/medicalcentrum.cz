@@ -1,11 +1,12 @@
 ---
 layout: layouts/base.njk
 title: Ceník výkonů nehrazených ze zdravotního pojištění
+menu: Ceník výkonů
 id: cenik-vykonu
 type: inline
+show: true
 date: 2021-10-02
 ---
-
 <table class="table table-bordered cenik">
                         <tr>
                             <th>Výkon</th>
@@ -85,5 +86,4 @@ date: 2021-10-02
                         </tr>
                     </table>
 
-                    U ŽÁDNÉHO ZDRAVOTNÍHO VÝKONU PROVEDENÉHO V TÉTO ORDINACI NENÍ VYŽADOVÁN SOUHLAS PACIENTA PÍSEMNOU FORMOU.
-
+U ŽÁDNÉHO ZDRAVOTNÍHO VÝKONU PROVEDENÉHO V TÉTO ORDINACI NENÍ VYŽADOVÁN SOUHLAS PACIENTA PÍSEMNOU FORMOU.

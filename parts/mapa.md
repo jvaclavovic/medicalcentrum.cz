@@ -1,8 +1,10 @@
 ---
 layout: layouts/base.njk
 title: Mapa
+menu: Mapa
 id: mapy
 type: inline
+show: true
 date: 2021-11-02
 ---
 

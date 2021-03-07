@@ -5,15 +5,19 @@ backend:
 media_folder: "_site/images/"
 public_folder: "/images/"
 
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+
 collections:
   - name: "posts"
     label: "Posts"
     folder: "posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["normal", "warning"] }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
       - { label: "Date", name: "date", widget: "date", default: "" }
       - { label: "Post Body", name: "body", widget: "markdown" }
 
@@ -24,7 +28,23 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/base.njk" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Menu", name: "menu", widget: "string", required: false }
       - { label: "ID", name: "id", widget: "string" }
       - { label: "Type", name: "type", widget: "select", options: ["block", "inline", "inline-no-title"] }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
       - { label: "Date", name: "date", widget: "date", default: "" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Settings"
+        name: "settings"
+        file: "/_data/settings.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Copyright, name: copyright, widget: string }
