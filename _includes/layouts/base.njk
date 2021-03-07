@@ -82,11 +82,9 @@
         </div>
     </section>
 
-    <br/>
-
 {% for post in postslist | reverse %}
 {% if post.data.show == true %}
-<section id="{{ post.data.slug }}">
+<section class="posts">
 	<div class="container">
         <div class="row">
             <div class="col-lg-12">
