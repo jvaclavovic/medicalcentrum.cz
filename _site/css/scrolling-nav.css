@@ -1,0 +1,178 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+section {
+    background-color: #eee;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.zakladni-informace {
+    padding-top: 0px;
+    text-align: center;
+    background: #eee;
+}
+
+.zakladni-informace table {
+	background-color: white;
+}
+
+.zakladni-informace .jumbotron {
+	background-color: white;
+}
+
+table {
+    background: white;
+}
+
+
+.had {
+    background-image: url(../images/background.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    z-index: 4;
+}
+
+.poskytovane-sluzby {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.objednavani, .objednavani p {
+    text-align: left;
+    font-size: 18px;
+} 
+
+.fotografie {
+    text-align: center;
+    padding-top: 50px;
+    background: #eee;
+}
+
+
+.poskytovane-sluzby .jumbotron {
+    background-color: white;
+}
+
+.smluvni-pojistovny {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.smluvni-pojistovny .jumbotron {
+	background-color: white;
+}
+
+.cenik-vykonu {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.kontakt {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.mapy {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.backg {
+	min-height: 158px;
+}
+
+.navbar {
+    background-image: linear-gradient(to bottom, #c1d3ec 0, #daedf6 100%);
+}
+
+.page-header {
+    padding-top: 120px;
+    padding-bottom: 20px;
+    color: white;
+
+    background-image: linear-gradient(to bottom, #5B6CF0 0, #50A1D4 100%);
+    margin: 0;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.row ul {
+    list-style-position: inside;
+    padding: 5px;
+}
+
+.row li {
+    padding: 5px;
+    font-size: 18px;
+	text-align: left;
+}
+
+table.cenik td:first-child {
+    text-align: left;
+}
+
+table.cenik {
+    background-color: white;
+}
+
+table.cenik {
+    background-color: white;
+}
