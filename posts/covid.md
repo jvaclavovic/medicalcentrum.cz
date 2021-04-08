@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Očkování Covid-19
 type: normal
-show: true
+show: false
 date: 2021-03-01
 ---
 <h3 class="text-x"><strong>Očkování Covid-19 !!!</strong></h3>
