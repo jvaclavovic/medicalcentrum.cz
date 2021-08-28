@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Dovolená
 type: warning
-show: true
+show: false
 date: 2021-03-01
 ---
 Zastupující lékař v případě akutních potíží:
