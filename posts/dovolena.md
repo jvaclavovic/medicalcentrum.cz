@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Dovolená 29. 10. 2021
 type: warning
-show: false
+show: true
 date: 2021-03-01
 ---
 Zastupující lékař v případě akutních potíží:
