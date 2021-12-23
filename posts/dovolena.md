@@ -8,3 +8,7 @@ date: 2021-03-01T23:00:00.000Z
 Zastupující lékař v případě akutních potíží:
 
 MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel: 377 224 480
+
+Čt          15-18
+
+Po-St     8-13
