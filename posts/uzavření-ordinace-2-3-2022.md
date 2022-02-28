@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Uzavření ordinace 2.3.2022
+title: 2.3.2022 uzavřena ordinace z provozních důvodů
 type: warning
 show: true
 date: 2022-02-27T23:00:00.000Z
