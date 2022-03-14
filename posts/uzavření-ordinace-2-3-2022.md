@@ -1,18 +1,18 @@
 ---
 layout: layouts/base.njk
-title: 2.3.2022 uzavřena ordinace z provozních důvodů
+title: Dovolená
 type: warning
 show: true
-date: 2022-02-27T23:00:00.000Z
+date: 2022-03-16T23:00:00.000Z
 ---
-**Z provozních důvodů (nepoteče voda) dne 2.3.2022  je možný kontakt s lékařem pouze telefonicky – na tel. č. 377 325 998:**
+**Dovolená dne 17.3. - 18.3.2022:**
 
- 
-
-Zastupující lékař v případě akutních potíží a nutnosti osobního kontaktu s lékařem: 
-
- 
+Zastupující lékař v případě akutních potíží: 
 
 MUDr. Petra Machálková, Skrétova 47 (lékařský dům, 5. patro), tel: 792 337 559 
 
-St  7,30 – 11 hod. a 11,30 - 14 hod.
+ 
+
+Čt  10,30 – 12 hod.  (v ranních hodinách přítomna pouze zdravotní sestra)
+
+Pá   7,30 – 12  hod.
