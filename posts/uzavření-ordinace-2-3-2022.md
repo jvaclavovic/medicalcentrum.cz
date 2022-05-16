@@ -2,17 +2,15 @@
 layout: layouts/base.njk
 title: Dovolená
 type: warning
-show: false
+show: true
 date: 2022-03-16T23:00:00.000Z
 ---
-**Dovolená dne 17.3. - 18.3.2022:**
+**Dovolená:** 
 
-Zastupující lékař v případě akutních potíží: 
+Zastupující lékař v případě akutních potíží:
 
-MUDr. Petra Machálková, Skrétova 47 (lékařský dům, 5. patro), tel: 792 337 559 
+20.5.2022 -  MUDr. Rudolf Červený, Veleslavínova 35, Plzeň, tel.: 377 320 720
 
- 
+23.5.2022 -  MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
 
-Čt  10,30 – 12 hod.  (v ranních hodinách přítomna pouze zdravotní sestra)
-
-Pá   7,30 – 12  hod.
+24.5.2022 -  MUDr. Petra Machálková, Skrétova 47, Plzeň, tel.: 792 337 559
