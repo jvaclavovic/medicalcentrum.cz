@@ -2,15 +2,27 @@
 layout: layouts/base.njk
 title: Dovolená
 type: warning
-show: false
+show: true
 date: 2022-03-16T23:00:00.000Z
 ---
-Zastupující lékař v případě akutních potíží:
+Zastupující lékař v případě akutních potíží: 
 
-7.7-8.7.2022 - MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
+ 
 
-18.7.-22.7.2022 - MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
+**Dne 23.12.2022** - MUDr. Anna Šeberová, Purkyňova 22, Plzeň tel.: 377 236 125
 
-25.7.-29.7.2022 - MUDr. Rudolf Červený, Veleslavínova 35, Plzeň, tel.: 377 320 720
+ 
 
-15.8.-19.8.2022 - MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
+Pá  7,00 – 12,00 hod.
+
+ 
+
+**Dne 27.12. - 28.12.2022** - MUDr. Petra Machálková, Skrétova 47 (lékařský dům, 5. patro), 
+
+tel: 792 337 559 
+
+ 
+
+Út   7,30 – 11,00 hod. a 12,30 – 18,00 hod.
+
+St    7,30 – 11,00 hod. a 11,30 – 14,00 hod.
