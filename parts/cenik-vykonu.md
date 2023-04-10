@@ -14,7 +14,7 @@ date: 2021-10-02
                         </tr>
                         <tr>
                             <td>Výpis ze zdravotnické dokumentace</td>
-                            <td>250 Kč</td>
+                            <td>300 Kč</td>
                         </tr>
                         <tr>
                             <td>Vyšetření pro řidičský průkaz (vydání, rozšíření, prodloužení)</td>
