@@ -5,22 +5,18 @@ type: warning
 show: false
 date: 2022-03-16T23:00:00.000Z
 ---
- 
+ Zastupující lékař v případě akutních potíží:
 
-Zastupující lékař v případě akutních potíží:
 
- 
 
-**13.2.-17.2.2023** - MUDr. Rudolf Červený, Veleslavínova 35, Plzeň, tel: 377 320 720
+**9.5. - 12.5.2023**     -   MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
 
  
 
-Pondělí    07:30 - 13:30
+Úterý       8 - 13 hod.
 
-Úterý       07:30 - 13:30
+Středa      8 - 13 hod.
 
-Středa      07:30 - 13:00
+Čtvrtek   15 - 18 hod.
 
-Čtvrtek    13:00 - 18:00
-
-Pátek        07:30 - 13:00
+Pátek        8 - 13 hod.
