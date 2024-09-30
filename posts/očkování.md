@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Očkování
 type: warning
-show: true
+show: false
 date: 2021-12-04T23:00:00.000Z
 ---
 Zahájeno očkování proti chřipce -  možno kdykoli v ordinačních hodinách.
