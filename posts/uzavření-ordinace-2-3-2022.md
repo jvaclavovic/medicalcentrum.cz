@@ -7,10 +7,14 @@ date: 2022-03-16T23:00:00.000Z
 ---
 Zastupující lékař v případě akutních potíží:
 
-**Dne 13.12.2024** - MUDr. Petra Machálková, Skrétova 47 (lékařský dům, 5. patro), 
+23.12.2024 - MUDr. Anna Cimburová / MUDr. Anna Šeborová, Purkyňova 22, Plzeň,
 
-tel: 792 337 559 
+                      tel.č. 377 236 125
+
+                      Pondělí: 7 – 12  hod.
 
  
 
-Pátek   7,30 – 12,00 hod.
+27.12.2024 -  MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
+
+                      Pátek:   8 – 13  hod.
