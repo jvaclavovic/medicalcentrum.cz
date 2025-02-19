@@ -7,10 +7,10 @@ date: 2022-03-16T23:00:00.000Z
 ---
 Zastupující lékař v případě akutních potíží:
 
-23.12.2024 - MUDr. Anna Cimburová / MUDr. Anna Šeborová, Purkyňova 22, Plzeň, tel. 377 236 125
+24.2.- 28.2.2025 - MUDr. Rudolf Červený, Veleslavínova 35, Plzeň, tel: 377 320 720
 
-                      Pondělí: 7 – 12  hod.
-
-27.12.2024 -  MUDr. Jana Duchková, nám. Republiky 27, Plzeň, tel.: 377 224 480
-
-                      Pátek:   8 – 13  hod.
+Pondělí    07:30 - 13:30
+Úterý       07:30 - 13:30
+Středa      07:30 - 13:00
+Čtvrtek    13:00 - 18:00
+Pátek        07:30 - 13:00
