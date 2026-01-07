@@ -5,4 +5,4 @@ type: warning
 show: false
 date: 2022-03-16T23:00:00.000Z
 ---
-Dne 31.12. 2025 ordinace jen do 12 hodin.
+Dne 31.12. 2025 ordinace jen do 10 hodin.
